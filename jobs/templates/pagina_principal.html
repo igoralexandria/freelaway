@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'jobs/css/encontrar_jobs.css' %}">
+{% endblock %}
+
+{% block 'body' %}
+    <center><h2 class="titulo">Seja Bem-Vindo</h2></center>
+    <h3>Escolha uma das opções abaixo: </h3>
+
+    <center>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'jobs/img/card1.png' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black; height: 40%">Busque por Jobs e os aceite.</h5>
+                            <p class="card-text" style="color: black">Some quick example text to build on the card title and make up the bulk of the
+                                card's
+                                content.</p>
+                            <a href="{% url 'encontrar_jobs' %}" class="btn btn-success">Acessar agora</a>
+                        </div>
+                    </div>
+                </div>
+                    <br>
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'jobs/img/card2.png' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black; height: 40%">Faça alterações e consulte históricos recentes.</h5>
+                            <p class="card-text" style="color: black">Some quick example text to build on the card title and make up the bulk of the
+                                card's
+                                content.</p>
+                            <a href="{% url 'perfil' %}" class="btn btn-success">Acessar agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+{% endblock %}
